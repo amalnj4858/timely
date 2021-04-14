@@ -1,0 +1,32 @@
+.header{
+    height: fit-content;
+    display: flex;
+    color: white;
+    background: #89D1FE;
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size:xx-large;
+    margin-bottom: 10px;
+}
+.options{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 400;
+    font-size:large;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.option{
+    height: fit-content;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.options:last-child{
+    margin-right: 25px;
+}
