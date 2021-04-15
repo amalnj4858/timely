@@ -2,6 +2,7 @@ import React from 'react';
 import './Signinform.css';
 import {signInWithPopUp} from '../../firebase/firebase.config';
 
+
 const Signinform = ()=>{
     const popUp  = ()=>{
         signInWithPopUp();

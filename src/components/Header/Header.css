@@ -30,3 +30,11 @@
 .options:last-child{
     margin-right: 25px;
 }
+
+.link{
+    text-decoration: none;
+}
+
+.link:active,:visited{
+    color: white;
+}

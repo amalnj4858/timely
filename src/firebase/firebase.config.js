@@ -16,4 +16,11 @@ const firebaseConfig = {
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
-  export const signInWithPopUp = ()=> firebase.auth().signInWithPopup(provider);
+  const Auth = firebase.auth();
+
+  export default Auth;
+
+  export const signInWithPopUp = ()=> firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE).then(()=>{
+     return  firebase.auth().signInWithPopup(provider);
+  }).catch(error=>console.log(error))
+  

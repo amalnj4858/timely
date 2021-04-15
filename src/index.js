@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './redux/Store/store.js';
+import {BrowserRouter} from 'react-router-dom';
 
 
 ReactDOM.render(
-  <Provider store={store}>
+  <BrowserRouter>
+    <Provider store={store}>
       <App />
-  </Provider>
+    </Provider>
+  </BrowserRouter>
   ,
   document.getElementById('root')
 );
