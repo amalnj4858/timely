@@ -16,9 +16,9 @@ const Header = ({currentUser,signOutUser}) =>{
              <div className='options'>
                 <div className='option'>Home</div>
                 <div className='option'>Features</div>
-                <div className='option' onClick={onButtonClick}>
+                <div className='option' >
                     {
-                        currentUser ? <Link className='link' to ='/'>Sign Out</Link> :<Link className='link' to ='/'>Sign In</Link>
+                        currentUser ? <Link className='link' to ='/' onClick={onButtonClick}>Sign Out</Link> :<Link className='link' to ='/'>Sign In</Link>
                     }
                 </div>
              </div>   
