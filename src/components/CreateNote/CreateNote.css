@@ -1,0 +1,75 @@
+.createNote{
+    position: absolute;
+    top: 30%;
+    bottom: auto;
+    height: fit-content;
+    width: 80%;
+    border: whitesmoke solid 1px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    
+}
+.formItem{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.createNoteForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.noteTitle{
+    background: inherit;
+    border: white solid 1px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: white;
+    font-family:  'Lato', sans-serif;
+    height: 20px;
+    width: 200px;
+    font-size: medium;
+}
+
+.noteDescription{
+    width: 80%;
+    height: 20vh;
+    background: inherit;
+    border: white solid 1px;
+    resize: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: 22px;
+    font-family:  'Lato', sans-serif;
+    font-size: medium;
+}
+
+.submitButton{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background: inherit;
+    border: white solid 1px;
+    border-radius: 25px;
+    height: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.submitButton:focus,.noteTitle:focus,.noteDescription:focus{
+    outline: none;
+    background: inherit;
+}
+
+.submitButton:hover{
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+::placeholder{
+    color: whitesmoke;
+}
+
+.noteTitle:focus,.noteDescription:focus{
+    background: rgba(255,255,255,0.2);
+}

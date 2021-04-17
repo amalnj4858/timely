@@ -1,31 +1,26 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import CreateNote from '../../components/CreateNote/CreateNote';
+
 import './Notespage.css';
 
-const Notespage = ({userName})=>{
+const Notespage = ({userName,uid})=>{
     return(
         <div className='notesPage'>
-            <div className='createReminder'>
-                <div className='heading'>Create Reminder</div>
+            <div className='createNotes'>
                 <div className='greeting'>{`Hey there ${userName}!`}</div>
+                <CreateNote uid = {uid} />
             </div>
-            <div className='remindersContainer'>
-                <div className='reminderType'>
-                    <div className='heading'>Important</div>
-                </div>
-                <div className='reminderType'>
-                    <div className='heading'>Intermediate</div>
-                </div>
-                <div className='reminderType'>
-                    <div className='heading'>Lite</div>
-                </div>
+            <div className='notesContainer'>
+
             </div>
         </div>
     )
 }
 
 const matchStateToProps = (state)=>({
-    userName : state.user.currentUser.displayName
+    userName : state.user.currentUser.displayName,
+    uid : state.user.currentUser.uid
 })
 
 export default connect(matchStateToProps)(Notespage);

@@ -1,27 +1,28 @@
 .notesPage{
     display: grid;
-    grid-template-columns: 1.5fr 3fr;
+    grid-template-columns: 1.3fr 3fr;
     height: 91.5vh;
 }
 
-.createReminder{
-    background: rgb(99,102,106);
+.createNotes{
+    background: #192841;
     color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: sticky;
 }
 
-.remindersContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.notesContainer{
+    display: flex;
 }
 
 .heading,.greeting{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20%;
 }
 
-.reminderType{
-    border-right: gray solid 1px;
-}
+
 
 
 

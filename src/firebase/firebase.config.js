@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 
 import "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBgpKXOnT0vGohknyN-sjLzWV62krIbdwc",
@@ -12,13 +13,13 @@ const firebaseConfig = {
     measurementId: "G-YCP4R2CWPE"
   };
 
-  firebase.initializeApp(firebaseConfig);
+  
+   firebase.initializeApp(firebaseConfig);
+  
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
-  const Auth = firebase.auth();
-
-  export default Auth;
+  export default firebase;
 
   export const signInWithPopUp = ()=> firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE).then(()=>{
      return  firebase.auth().signInWithPopup(provider);

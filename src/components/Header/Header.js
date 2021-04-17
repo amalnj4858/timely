@@ -2,13 +2,13 @@ import React from 'react';
 import './Header.css';
 import {connect} from 'react-redux';
 import { signOutUser } from '../../redux/User/User-actions';
-import Auth from '../../firebase/firebase.config.js';
+import firebase from '../../firebase/firebase.config.js';
 import {Link} from 'react-router-dom';
 
 const Header = ({currentUser,signOutUser}) =>{
     const onButtonClick = ()=>{
         signOutUser();
-        Auth.signOut();
+        firebase.auth().signOut();
     }
     return(
         <div className='header'>

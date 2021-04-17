@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header.js';
 import Signinpage from './pages/Signinpage/Signinpage.js';
 import {connect} from 'react-redux';
-import Auth from './firebase/firebase.config.js';
+import firebase from './firebase/firebase.config.js';
 import {setUser} from './redux/User/User-actions.js';
 import {Route,Redirect,Switch} from 'react-router-dom';
 import Notespage from './pages/Notespage/Notespage';
@@ -13,7 +13,7 @@ const App =({setCurrentUser,currentUser})=> {
   
   useEffect(()=>{
     if(!currentUser){
-      const unsubscribeAuth = Auth.onAuthStateChanged(user=>{
+      const unsubscribeAuth = firebase.auth().onAuthStateChanged(user=>{
         if(user){
           if(user.email.split('@')[1]==='hyderabad.bits-pilani.ac.in'){
             const {email,displayName,uid} = user;
