@@ -1,0 +1,33 @@
+.featureCard{
+    height: 35vh;
+    width : 15vw;
+    border:cornflowerblue solid 5px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px #333;
+    font-family: 'Lato',sans-serif;
+    font-weight: bolder;
+    color: gray;
+}
+
+.featureImage{
+    height: 5rem;
+    width: auto;
+}
+
+.featureImage:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.featureCard:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition:  ease-in-out 0.5s;
+}

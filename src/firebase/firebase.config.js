@@ -23,5 +23,5 @@ const firebaseConfig = {
 
   export const signInWithPopUp = ()=> firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE).then(()=>{
      return  firebase.auth().signInWithPopup(provider);
-  }).catch(error=>console.log(error))
+  }).catch(error=>alert(error.message))
   

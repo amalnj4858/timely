@@ -1,5 +1,5 @@
 .header{
-    height: fit-content;
+    height: 10%;
     display: flex;
     color: white;
     background: #89D1FE;
@@ -15,7 +15,6 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    cursor: pointer;
     font-weight: 400;
     font-size:large;
     margin-top: auto;
@@ -25,6 +24,8 @@
     height: fit-content;
     margin-right: 10px;
     margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .options:last-child{

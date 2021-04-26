@@ -1,0 +1,29 @@
+.stickynote{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 300px;
+    width: 250px;
+}
+
+.stickyNoteHeading{
+    display: flex;
+    flex-direction: column;
+    height: 15%;
+    background: #e6e67a;
+    word-wrap: normal;
+    padding: 5px;
+}
+
+.stickynoteDescription{
+    height: 85%;
+    background: #FFFF88;
+    word-wrap: inherit;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+}
+
+.close{
+    margin-left: auto;
+    cursor: pointer;
+}

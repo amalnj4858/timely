@@ -5,7 +5,7 @@ import './Signinpage.css';
 const Signinpage = ()=>{
     return(
         <div className='signinpage'>
-            <h1 className='description'>A website that helps you keep up with time :)</h1>
+            <h1 className='description'>LOG IN</h1>
             <Signinform/>
         </div>
     )

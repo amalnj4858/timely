@@ -14,7 +14,7 @@ const Header = ({currentUser,signOutUser}) =>{
         <div className='header'>
             <div className='logo'>timely.</div>
              <div className='options'>
-                <div className='option'>Home</div>
+                <Link to ='/home' className='option'>Home</Link>
                 <div className='option'>Features</div>
                 <div className='option' >
                     {

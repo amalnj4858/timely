@@ -1,0 +1,54 @@
+.homepage{
+    height: 90%;
+    background:linear-gradient(180deg, #555251 60%, white 50%);
+    color: white;
+    font-family:  'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.homepage-heading{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.alarm{
+    height: 10%;
+    width: auto;
+    margin-top: 4%;
+    cursor: pointer;   
+}
+
+.alarm:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: scale3d(1.5);
+}
+
+.features{
+  display: flex;
+  gap: 5rem;
+  position: relative;
+  top: 18%;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: rotate(0deg);
+    }
+    
+    20%, 80% {
+      transform: rotate(-30deg);
+    }
+  
+    30%, 50%, 70% {
+      transform: rotate(30deg);
+    }
+  
+    40%, 60% {
+      transform: rotate(0deg);
+    }
+  }

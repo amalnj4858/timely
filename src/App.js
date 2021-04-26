@@ -7,6 +7,7 @@ import firebase from './firebase/firebase.config.js';
 import {setUser} from './redux/User/User-actions.js';
 import {Route,Redirect,Switch} from 'react-router-dom';
 import Notespage from './pages/Notespage/Notespage';
+import Homepage from './pages/Homepage/Homepage';
 
 
 const App =({setCurrentUser,currentUser})=> {
@@ -37,8 +38,9 @@ const App =({setCurrentUser,currentUser})=> {
     <div className="App">
       <Header/>
         <Switch>
-          <Route exact path = '/' render = {()=>currentUser ? <Redirect to = '/notes' />: <Signinpage/> } />
-          <Route exact path = '/notes' component = {Notespage} />
+          <Route exact path = '/' render = {()=>currentUser ? <Redirect to = '/home' />: <Signinpage/> } />
+          <Route exact path = '/home' component = {Homepage} />
+          <Route exact path = '/home/notes' component = {Notespage} />
         </Switch>
     </div>
   );

@@ -1,0 +1,13 @@
+.notesContainer{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    padding: 20px;
+    justify-items: center;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+.notesContainer:last-child{
+    margin-bottom: 1rem;
+}
