@@ -2,9 +2,8 @@ import React,{useState,useEffect} from 'react';
 import firebase from '../../firebase/firebase.config.js';
 import StickyNote from '../StickyNote/StickyNote.js';
 import EmptyState from '../EmptyState/EmptyState.js';
-import './NotesContainer.css';
 import Spinner from '../Spinner/Spinner.js';
-
+import './NotesContainer.css';
 
 const NotesContainer = ({uid})=>{
     const [notes,setNotes] = useState(null);

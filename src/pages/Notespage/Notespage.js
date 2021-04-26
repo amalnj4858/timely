@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import CreateNote from '../../components/CreateNote/CreateNote';
 import NotesContainer from '../../components/NotesContainer/NotesContainer';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import searchImage from '../../assets/search.png';
 
 import './Notespage.css';
 
@@ -12,7 +14,11 @@ const Notespage = ({userName,uid})=>{
                 <div className='greeting'>{`Hey there ${userName}!`}</div>
                 <CreateNote uid = {uid} />
             </div>
-            <NotesContainer uid = {uid} />
+        <div className = 'notesHolder'>
+            <SearchBar image = {searchImage} />
+            <NotesContainer uid = {uid} /> 
+        </div>
+           
         </div>
     )
 }

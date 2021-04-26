@@ -1,11 +1,10 @@
 .createNote{
     position: absolute;
-    top: 30%;
+    top: 25vh;
     bottom: auto;
     width: 80%;
     border: whitesmoke solid 1px;
     border-radius: 5px;
-    background: #555251;
     
 }
 .formItem{
