@@ -8,7 +8,7 @@ const FeatureCard = ({image,heading,history})=>{
     }
     return(
         <div className='featureCard' onClick = {onClickCard} >
-            <img src = {image} className = 'featureImage' prop = 'feature image'/>
+            <img src = {image} className = 'featureImage' prop = 'feature'/>
             <div className='featureTitle'>{heading}</div>
         </div>
     )

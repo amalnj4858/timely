@@ -30,3 +30,7 @@
 .searchTextField:focus{
     outline: none;
 }
+
+.searchTextField::placeholder{
+    color: gray;
+}

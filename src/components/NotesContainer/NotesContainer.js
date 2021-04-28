@@ -5,28 +5,7 @@ import EmptyState from '../EmptyState/EmptyState.js';
 import Spinner from '../Spinner/Spinner.js';
 import './NotesContainer.css';
 
-const NotesContainer = ({uid})=>{
-    const [notes,setNotes] = useState(null);
-
-    const database = firebase.firestore();
-
-    useEffect(()=>{
-        database.collection('notes').onSnapshot(snap=>{
-            if(snap.docs)
-            {
-               setNotes(snap.docs.filter(doc=>doc.data().uid===uid)
-                .map(doc=>{
-                    return{
-                        ...doc.data(),
-                        uid : doc.data().uid,
-                        noteId : doc.id
-                    }
-                }))
-        }
-        })
-    },[])
-    
-    
+const NotesContainer = ({notes})=>{
     return(
         <div className='notesContainer'>
             {   
