@@ -4,11 +4,31 @@
     height: 90%;
     display: flex;
     flex-direction: column;
-    background: rgba(0,0,0,.03);;
+    background-color:#343D40;
+    position: relative;
+}
+
+.hourglass{
+    height: 150px;
+    width: 150px;
+    background:initial;
+    position: absolute;
+    top: 65%;
+    right: 5%;
+}
+
+.alarmClock{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
 }
 
 .description{
     align-self: center;
     font-family: 'Lato', sans-serif;
     margin-top: 20vh;
+    color: white;
+    z-index: 10;
 }

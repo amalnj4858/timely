@@ -8,13 +8,14 @@ import {setUser} from './redux/User/User-actions.js';
 import {Route,Redirect,Switch} from 'react-router-dom';
 import Notespage from './pages/Notespage/Notespage';
 import Homepage from './pages/Homepage/Homepage';
+import Reminderspage from './pages/Reminderspage/Reminderspage';
 
 
 const App =({setCurrentUser,currentUser})=> {
   
   useEffect(()=>{
     if(!currentUser){
-      const unsubscribeAuth = firebase.auth().onAuthStateChanged(user=>{
+      const unsubscribeAuth = firebase.auth().onAuthStateChanged(user=>{           //signs in user only if its a bits hyderabad email id.
         if(user){
           if(user.email.split('@')[1]==='hyderabad.bits-pilani.ac.in'){
             const {email,displayName,uid} = user;
@@ -29,7 +30,7 @@ const App =({setCurrentUser,currentUser})=> {
       }
     )
     return ()=>{
-        unsubscribeAuth();
+        unsubscribeAuth();   //using the hook like componentWillUnmount. Done to avoid any memory leaks as the user signs out. 
     }
     }
 })
@@ -41,6 +42,7 @@ const App =({setCurrentUser,currentUser})=> {
           <Route exact path = '/' render = {()=>currentUser ? <Redirect to = '/home' />: <Signinpage/> } />
           <Route exact path = '/home' component = {Homepage} />
           <Route exact path = '/home/notes' component = {Notespage} />
+          <Route exact path = '/home/reminders' component = {Reminderspage} />
         </Switch>
     </div>
   );
@@ -54,4 +56,4 @@ const mapStateToProps = (state)=>({
   currentUser : state.user.currentUser
 })
 
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);  //Higher order component having access to the current user from the store.

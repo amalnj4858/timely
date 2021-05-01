@@ -14,10 +14,19 @@ const Notespage = ({userName,uid})=>{
     const [filteredNotes,setFilteredNotes] = useState(null);
     const database = firebase.firestore();
 
-    useEffect(()=>{
+    useEffect(()=>{            // react hook to replicate componentDidMount of a class component. Fetches notes of the current user from the backend.
         database.collection('notes').onSnapshot(snap=>{
             if(snap.docs)
             {
+               setFilteredNotes(  //initially sets all notes as filtered notes.
+                snap.docs.filter(doc=>doc.data().uid===uid)
+                .map(doc=>{
+                    return{
+                        ...doc.data(),
+                        uid : doc.data().uid,
+                        noteId : doc.id
+                    }
+                }))
                setNotes(snap.docs.filter(doc=>doc.data().uid===uid)
                 .map(doc=>{
                     return{
@@ -26,21 +35,21 @@ const Notespage = ({userName,uid})=>{
                         noteId : doc.id
                     }
                 }))
+                
         }
         })
     },[])
 
-    const filterNotes = (event)=>{
+
+    const filterNotes = (event)=>{  //filteredNotes get updated depending on user's input
         const inputValue = event.target.value.toLowerCase();
         if(inputValue){
-        setFilteredNotes(
-            notes.filter(note=>note.title.toLowerCase().includes(inputValue))
-        )
+        setFilteredNotes(notes.filter(note=>note.title.toLowerCase().includes(inputValue))) 
     }
         else
         setFilteredNotes(notes)
     }
-    
+
     return(
         <div className='notesPage'>
             <div className='createNotes'>
@@ -55,7 +64,7 @@ const Notespage = ({userName,uid})=>{
     )
 }
 
-const matchStateToProps = (state)=>({
+const matchStateToProps = (state)=>({   //fetches the username and uid of user from the store
     userName : state.user.currentUser.displayName,
     uid : state.user.currentUser.uid
 })

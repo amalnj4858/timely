@@ -5,7 +5,6 @@
     padding: 20px;
     justify-items: center;
     word-wrap: break-word;
-    overflow-y: auto;
 }
 
 .notesContainer:last-child{

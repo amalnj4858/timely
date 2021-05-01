@@ -1,11 +1,10 @@
-import React,{useState,useEffect} from 'react';
-import firebase from '../../firebase/firebase.config.js';
+import React from 'react';
 import StickyNote from '../StickyNote/StickyNote.js';
 import EmptyState from '../EmptyState/EmptyState.js';
 import Spinner from '../Spinner/Spinner.js';
 import './NotesContainer.css';
 
-const NotesContainer = ({notes})=>{
+const NotesContainer = ({notes})=>{  //returns the collection of all notes
     return(
         <div className='notesContainer'>
             {   

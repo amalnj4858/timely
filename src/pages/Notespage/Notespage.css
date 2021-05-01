@@ -5,7 +5,7 @@
 }
 
 .createNotes{
-    background: #192841;
+    background-image: linear-gradient(to top, #537895 0%, #09203f 100%);
     color: white;
     display: flex;
     justify-content: center;

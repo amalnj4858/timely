@@ -6,9 +6,9 @@ const CreateNote = ({uid})=>{
     const [title,setTitle] = useState('');
     const [description,setDescription] = useState('');
 
-    const database = firebase.firestore();
+    const database = firebase.firestore();         //refers to the firestore database
     
-    const onButtonClick = (event)=>{
+    const onButtonClick = (event)=>{             //this function adds the note to firestore 
         event.preventDefault();
         if(!title && !description){
             alert('Please enter a title and description');

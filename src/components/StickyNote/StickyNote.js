@@ -5,7 +5,7 @@ import './StickyNote.css';
 
 const StickyNote = ({title,description,noteId})=>{
     const database = firebase.firestore();
-    const onButtonClick = ()=>{
+    const onButtonClick = ()=>{                         //when the cross is clicked, the item is deleted off of the firestore database.
         database.collection('notes').doc(`${noteId}`).delete();
     }
     return(

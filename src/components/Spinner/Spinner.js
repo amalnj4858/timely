@@ -7,4 +7,4 @@ const Spinner = ()=>{
     )
 }
 
-export default Spinner;
+export default Spinner;  //rendered when the any part of the app is in a loading state
