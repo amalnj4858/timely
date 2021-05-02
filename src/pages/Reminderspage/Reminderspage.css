@@ -1,0 +1,26 @@
+.remindersPage{
+    display: grid;
+    grid-template-columns: 1.1fr 3fr;
+    height: 90%;
+}
+
+.createReminder{
+    background: linear-gradient(to bottom, #283e51,#4b79a1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.remindersContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.remindersDivision{
+    text-align: center;
+}
+
+.important,.intermediate,.lite{
+    border-right: gray solid 1px;
+}
