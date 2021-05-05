@@ -11,7 +11,7 @@ const NotesContainer = ({notes})=>{  //returns the collection of all notes
                 notes ?
                     notes.length>0?
                         notes.map(note=>{
-                            return <StickyNote title = {note.title} description = {note.description} uid = {note.uid} noteId={note.noteId} />
+                            return <StickyNote type = 'notes' title = {note.title} description = {note.description} uid = {note.uid} noteId={note.noteId} />
                         })
                         :
                         <EmptyState />

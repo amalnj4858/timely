@@ -3,10 +3,10 @@ import firebase from '../../firebase/firebase.config';
 import './StickyNote.css';
 
 
-const StickyNote = ({title,description,noteId})=>{
+const StickyNote = ({title,description,noteId,type,daysLeft})=>{
     const database = firebase.firestore();
     const onButtonClick = ()=>{                         //when the cross is clicked, the item is deleted off of the firestore database.
-        database.collection('notes').doc(`${noteId}`).delete();
+        database.collection(`${type}`).doc(`${noteId}`).delete();
     }
     return(
         <div className='stickynote'>
@@ -14,8 +14,16 @@ const StickyNote = ({title,description,noteId})=>{
                 <div className='close' onClick={onButtonClick}> &#10008; </div>
                 <div className='stickynoteTitle'>{title.toUpperCase()}</div>
             </div>
-            
             <div className='stickynoteDescription'>{description}</div>
+            {
+                daysLeft ?
+                    daysLeft > 0 ?
+                    <div className = 'activeNote'>expires in {Math.round(daysLeft)} days</div>
+                    :
+                    <div className = 'expiredNote'>expired</div>
+                :
+                null
+            }
         </div>
     )
 }

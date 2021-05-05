@@ -4,26 +4,55 @@
     text-align: center;
     height: 300px;
     width: 250px;
+    background: #FFFF88;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .stickyNoteHeading{
     display: flex;
     flex-direction: column;
-    height: 15%;
+    height: fit-content;
     background: #e6e67a;
-    word-wrap: normal;
+    word-wrap: break-word;
     padding: 5px;
 }
 
 .stickynoteDescription{
     height: 85%;
     background: #FFFF88;
-    word-wrap: inherit;
-    border-radius: 0px 0px 10px 10px;
+    word-wrap: break-word;
     padding: 20px;
 }
 
 .close{
     margin-left: auto;
     cursor: pointer;
+}
+
+.activeNote{
+    margin: 5px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-self: flex-end;
+    width: fit-content;
+    font-size: small;
+    color: green;
+    border: green 1px solid;
+    border-radius: 10px;
+    
+}
+
+.expiredNote{
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    align-self: flex-end;
+    width: fit-content;
+    font-size: small;
+    color: red;
+    border: red 1px solid;
+    border-radius: 10px;
+    
 }
