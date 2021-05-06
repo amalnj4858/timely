@@ -9,6 +9,7 @@ import {Route,Redirect,Switch} from 'react-router-dom';
 import Notespage from './pages/Notespage/Notespage';
 import Homepage from './pages/Homepage/Homepage';
 import Reminderspage from './pages/Reminderspage/Reminderspage';
+import WeeklyPlannerpage from './pages/WeeklyPlannerpage/WeeklyPlannerpage';
 
 
 const App =({setCurrentUser,currentUser})=> {
@@ -43,6 +44,7 @@ const App =({setCurrentUser,currentUser})=> {
           <Route exact path = '/home' component = {Homepage} />
           <Route exact path = '/home/notes' component = {Notespage} />
           <Route exact path = '/home/reminders' component = {Reminderspage} />
+          <Route exact path = '/home/weekly-planner' component = {WeeklyPlannerpage} />
         </Switch>
     </div>
   );

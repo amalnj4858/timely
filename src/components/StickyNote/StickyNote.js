@@ -18,7 +18,7 @@ const StickyNote = ({title,description,noteId,type,daysLeft})=>{
             {
                 daysLeft ?
                     daysLeft > 0 ?
-                    <div className = 'activeNote'>expires in {Math.round(daysLeft)} days</div>
+                    <div className = 'activeNote'>expires in {Math.ceil(daysLeft)} days</div>
                     :
                     <div className = 'expiredNote'>expired</div>
                 :

@@ -46,6 +46,7 @@ const Reminderspage = ({uid,userName})=>{
             <div className='remindersContainer'>
                 <div className='important'>
                     <div className='remindersDivision'>
+                        <br/>
                         IMPORTANT
                         {
                             importantReminders ?
@@ -62,6 +63,7 @@ const Reminderspage = ({uid,userName})=>{
                 </div>
                 <div className='intermediate'>
                     <div className='remindersDivision'>
+                        <br/>
                         INTERMEDIATE
                         {
                             intermediateReminders ?
@@ -78,6 +80,7 @@ const Reminderspage = ({uid,userName})=>{
                 </div>
                 <div className='lite'>
                     <div className='remindersDivision'>
+                        <br/>
                         LITE
                         {
                             liteReminders ?

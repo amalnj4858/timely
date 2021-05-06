@@ -35,6 +35,7 @@ const CreateReminder = ({uid})=>{
 
     return(
         <div className='createReminderForm'>
+            Add a reminder
             <form className = 'createNoteForm'>
                     <div className = 'reminderFormItem'>
                         Title
