@@ -1,12 +1,22 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import  CreateWeeklyPlan  from '../../components/CreateWeeklyPlan/CreateWeeklyPlan.js';
 import './WeeklyPlannerpage.css';
 
-const WeeklyPlannerpage = ()=>{
+const WeeklyPlannerpage = ({uid})=>{
+
     return(
         <div className='WeeklyPlannerpage'>
-            <h1>HELLOOOOO</h1>
+            <CreateWeeklyPlan />
+            <div className='weeklyPlan'>
+
+            </div>
         </div>
     )
 }
 
-export default WeeklyPlannerpage;
+const matchStateToProps = (state)=>({
+    uid : state.user.currentUser.uid
+})
+
+export default connect(matchStateToProps)(WeeklyPlannerpage);

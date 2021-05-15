@@ -1,0 +1,43 @@
+.CreateWeeklyPlan{
+    height: 100%;
+    background-image: linear-gradient(to top, #537895 0%, #09203f 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.CreateWeeklyPlanForm{
+    border: white solid 1px;
+    border-radius: 5px;
+    height: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CreateWeeklyPlanFormItem{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.weeklyPlanTitle,.weeklyPlanTime{
+    background: inherit;
+    border: white solid 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: white;
+}
+
+.weeklyPlanTitle:focus,.weeklyPlanTime:focus{
+    outline: none;
+    background: rgba(255,255,255,0.2);
+}
+
+.weeklyPlanTitle:hover,.weeklyPlanTime:hover{
+    background: rgba(255,255,255,0.2);
+}
