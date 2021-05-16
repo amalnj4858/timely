@@ -39,7 +39,7 @@ const CreateReminder = ({uid})=>{
             <form className = 'createNoteForm'>
                     <div className = 'reminderFormItem'>
                         Title
-                        <input type="text" value = {title} name="title" className = 'reminderTitle' onChange = {(event)=>setTitle(event.target.value)} required />
+                        <input type="text" value = {title} name="title" className = 'reminderTitle' maxLength = '30' onChange = {(event)=>setTitle(event.target.value)} required />
                     </div>
                     <div className = 'reminderFormItem'>
                         Description

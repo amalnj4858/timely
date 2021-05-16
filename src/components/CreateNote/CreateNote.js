@@ -31,7 +31,7 @@ const CreateNote = ({uid})=>{
                 <form className = 'createNoteForm'>
                     <div className = 'formItem'>
                         Title:
-                        <input type="text" name="title" className = 'noteTitle' onChange = {(event)=>setTitle(event.target.value)} value = {title} required />
+                        <input type="text" name="title" className = 'noteTitle' onChange = {(event)=>setTitle(event.target.value)} maxLength = '30' value = {title} required />
                     </div>
                     <div className = 'formItem'>
                         Description:
