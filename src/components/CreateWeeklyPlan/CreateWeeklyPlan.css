@@ -12,7 +12,7 @@
 .CreateWeeklyPlanForm{
     border: white solid 1px;
     border-radius: 5px;
-    height: 30%;
+    height: fit-content;
     padding: 20px;
     display: flex;
     flex-direction: column;

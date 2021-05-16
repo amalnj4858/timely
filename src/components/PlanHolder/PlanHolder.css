@@ -1,0 +1,12 @@
+.PlanHolder,.PlanHolderEmpty{
+    border: gray solid 1px;
+}
+
+.PlanHolder{
+    background: lightskyblue;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
