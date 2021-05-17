@@ -3,5 +3,5 @@
     height: 80%;
     display: grid;
     border: gray solid 1px;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }

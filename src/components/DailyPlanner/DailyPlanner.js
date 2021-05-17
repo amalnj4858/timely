@@ -4,9 +4,11 @@ import PlanHolder from '../PlanHolder/PlanHolder';
 import './DailyPlanner.css';
 
 const DailyPlanner = ({day,plans})=>{
-   console.log(plans)
     return(
         <div className='DailyPlanner'>
+            <div className='dayName'>
+                {day.toUpperCase()}
+            </div>
             <PlanHolder plan = { plans ? plans.filter(plan=>plan.timing === 'morning' && plan.day === day)[0] : null} />
             <PlanHolder plan = { plans ? plans.filter(plan=>plan.timing === 'afternoon' && plan.day === day)[0] : null} />
             <PlanHolder plan = { plans ? plans.filter(plan=>plan.timing === 'evening' && plan.day === day)[0] : null} />

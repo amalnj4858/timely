@@ -2,11 +2,12 @@ import React,{useState,useEffect} from 'react';
 import {connect} from 'react-redux';
 import  CreateWeeklyPlan  from '../../components/CreateWeeklyPlan/CreateWeeklyPlan.js';
 import Planner from '../../components/Planner/Planner.js';
+import Spinner from '../../components/Spinner/Spinner.js';
 import firebase from '../../firebase/firebase.config.js';
 import {setPlans} from '../../redux/WeeklyPlans/WeeklyPlans-actions.js';
 import './WeeklyPlannerpage.css';
 
-const WeeklyPlannerpage = ({uid,setPlans})=>{
+const WeeklyPlannerpage = ({uid,setPlans,plans})=>{
     const database = firebase.firestore();
     const [dailyPlans,setDailyPlans] = useState(null);
     useEffect(() => {
@@ -27,14 +28,20 @@ const WeeklyPlannerpage = ({uid,setPlans})=>{
         <div className='WeeklyPlannerpage'>
             <CreateWeeklyPlan uid = {uid} />
             <div className='weeklyPlan'>
-                <Planner />
+                {
+                    plans ?
+                    <Planner />
+                    :
+                    <Spinner />
+                }
             </div>
         </div>
     )
 }
 
 const mapStateToProps = (state)=>({
-    uid : state.user.currentUser.uid
+    uid : state.user.currentUser.uid,
+    plans : state.weeklyPlans.plans
 })
 
 const mapDispatchToProps = (dispatch)=>({

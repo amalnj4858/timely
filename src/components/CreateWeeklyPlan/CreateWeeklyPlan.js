@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
+import {connect} from 'react-redux';
 import firebase from '../../firebase/firebase.config.js';
 import './CreateWeeklyPlan.css';
 
-const CreateWeeklyPlan = ({uid})=>{
+const CreateWeeklyPlan = ({uid,plans})=>{
     const [title,setTitle] = useState(null);
     const [timing,setTiming] = useState('morning');
     const [day,setDay] = useState('sunday');
@@ -12,17 +13,20 @@ const CreateWeeklyPlan = ({uid})=>{
     const onButtonClick = (event)=>{
         event.preventDefault();
         if(title)
-        {
-            database.collection('weekly-planner').add({
-            uid : uid,
-            title : title,
-            day : day,
-            timing : timing
-        })
-            setTitle('');
-    }
-    else
-        alert('Enter a title');
+            if(plans.filter(plan=>plan.day === day && plan.timing === timing).length === 0)
+                {
+                    database.collection('weekly-planner').add({
+                    uid : uid,
+                    title : title,
+                    day : day,
+                    timing : timing
+                })
+                    setTitle('');
+            }
+            else
+                alert('It is clashing!');
+        else
+            alert('Enter a title');
 }
 
     return(
@@ -60,4 +64,8 @@ const CreateWeeklyPlan = ({uid})=>{
     )
 }
 
-export default CreateWeeklyPlan;
+const mapStateToProps = (state)=>({
+    plans : state.weeklyPlans.plans
+})
+
+export default connect(mapStateToProps)(CreateWeeklyPlan);

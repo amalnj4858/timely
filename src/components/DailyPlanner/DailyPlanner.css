@@ -1,5 +1,10 @@
 .DailyPlanner{
     display: grid;
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
     width: 100%;
+    text-align: center;
+}
+
+.dayName{
+    border: gray 1px solid;
 }
