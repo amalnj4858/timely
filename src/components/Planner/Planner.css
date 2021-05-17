@@ -1,7 +1,7 @@
 .Planner{
     width: 80%;
     height: 80%;
-    border: gray solid 1px;
     display: grid;
+    border: gray solid 1px;
     grid-template-columns: repeat(7,1fr);
 }

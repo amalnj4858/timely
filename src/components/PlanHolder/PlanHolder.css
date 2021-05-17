@@ -1,5 +1,6 @@
 .PlanHolder,.PlanHolderEmpty{
     border: gray solid 1px;
+    color: white;
 }
 
 .PlanHolder{
@@ -9,4 +10,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.cross-button{
+    color: white;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.cross-button:hover{
+    cursor: pointer;
 }
