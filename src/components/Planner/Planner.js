@@ -1,11 +1,13 @@
 import React from 'react';
 import DailyPlanner from '../DailyPlanner/DailyPlanner';
 import TimeIndicator from '../TimeIndicator/TimeIndicator';
+import {connect} from 'react-redux'
 import './Planner.css';
 
-const Planner = ()=>{
+const Planner = ({darkModeOn})=>{
+    console.log(darkModeOn)
     return(
-        <div className='Planner'>
+        <div className='Planner' style = {darkModeOn?{color:'white'}:{color:'black'}} >
             <TimeIndicator />
             <DailyPlanner day = 'sunday' />
             <DailyPlanner day = 'monday' />
@@ -18,4 +20,8 @@ const Planner = ()=>{
     )
 }
 
-export default Planner;
+const mapStateToProps = (state)=>({
+    darkModeOn : state.darkMode.dark
+})
+
+export default connect(mapStateToProps)(Planner);

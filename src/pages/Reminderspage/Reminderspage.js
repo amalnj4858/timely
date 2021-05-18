@@ -8,7 +8,7 @@ import StickyNote from '../../components/StickyNote/StickyNote';
 import Spinner from '../../components/Spinner/Spinner';
 
 
-const Reminderspage = ({uid,userName})=>{
+const Reminderspage = ({uid,userName,darkModeOn})=>{
     const [todaysDate,setDate] = useState(new Date());
     const [importantReminders,setImportantReminders] = useState(null);
     const [intermediateReminders,setIntermediateReminders] = useState(null);
@@ -41,13 +41,15 @@ const Reminderspage = ({uid,userName})=>{
     return(
         <div className='remindersPage'>
             <div className='createReminder'>
+                
                 <CreateReminder uid = {uid} />
             </div>
-            <div className='remindersContainer'>
+            <div className='remindersContainer' style = {darkModeOn?{color : 'white',background : '#121212'}:{color : 'black',background : 'white'}} >
                 <div className='important'>
                     <div className='remindersDivision'>
                         <br/>
-                        IMPORTANT
+                       <div className = 'remindersTitle'> IMPORTANT </div>   
+                        
                         {
                             importantReminders ?
                                 importantReminders.length>0 ?
@@ -59,12 +61,14 @@ const Reminderspage = ({uid,userName})=>{
                             :
                              <Spinner />
                         }
+                  
                     </div>
                 </div>
                 <div className='intermediate'>
                     <div className='remindersDivision'>
                         <br/>
-                        INTERMEDIATE
+                       <div className = 'remindersTitle'> INTERMEDIATE </div> 
+                        
                         {
                             intermediateReminders ?
                                 intermediateReminders.length>0 ?
@@ -76,12 +80,14 @@ const Reminderspage = ({uid,userName})=>{
                             :
                             <Spinner />
                         }
+                        
                     </div>
                 </div>
                 <div className='lite'>
                     <div className='remindersDivision'>
                         <br/>
-                        LITE
+                       <div className = 'remindersTitle'> LITE </div> 
+                        
                         {
                             liteReminders ?
                                 liteReminders.length>0 ?
@@ -93,6 +99,7 @@ const Reminderspage = ({uid,userName})=>{
                             :
                             <Spinner />
                         }
+                        
                     </div>
                 </div>
             </div>
@@ -102,7 +109,8 @@ const Reminderspage = ({uid,userName})=>{
 
 const matchStateToProps = (state)=>({
     userName : state.user.currentUser.displayName,
-    uid : state.user.currentUser.uid
+    uid : state.user.currentUser.uid,
+    darkModeOn : state.darkMode.dark
 })
 
 export default connect(matchStateToProps)(Reminderspage);

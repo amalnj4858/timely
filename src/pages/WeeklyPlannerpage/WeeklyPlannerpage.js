@@ -7,7 +7,7 @@ import firebase from '../../firebase/firebase.config.js';
 import {setPlans} from '../../redux/WeeklyPlans/WeeklyPlans-actions.js';
 import './WeeklyPlannerpage.css';
 
-const WeeklyPlannerpage = ({uid,setPlans,plans})=>{
+const WeeklyPlannerpage = ({uid,setPlans,plans,darkModeOn})=>{
     const database = firebase.firestore();
     const [dailyPlans,setDailyPlans] = useState(null);
     useEffect(() => {
@@ -27,7 +27,7 @@ const WeeklyPlannerpage = ({uid,setPlans,plans})=>{
     return(
         <div className='WeeklyPlannerpage'>
             <CreateWeeklyPlan uid = {uid} />
-            <div className='weeklyPlan'>
+            <div className='weeklyPlan' style = {darkModeOn?{background:'#121212'}:{background:'white'}} >
                 {
                     plans ?
                     <Planner />
@@ -41,7 +41,8 @@ const WeeklyPlannerpage = ({uid,setPlans,plans})=>{
 
 const mapStateToProps = (state)=>({
     uid : state.user.currentUser.uid,
-    plans : state.weeklyPlans.plans
+    plans : state.weeklyPlans.plans,
+    darkModeOn : state.darkMode.dark
 })
 
 const mapDispatchToProps = (dispatch)=>({
