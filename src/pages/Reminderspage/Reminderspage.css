@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 1rem;
     height: 87.5vh;
     overflow-y: auto;
@@ -39,7 +38,16 @@
     border-right: gray solid 1px;
 }
 
-.remindersTitle{
-    position: absolute;
-    top: 0%;
-}
+.remindersDivision::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  .remindersDivision::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+  .remindersDivision::-webkit-scrollbar-thumb {
+    background-color: gray;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid white;  /* creates padding around scroll thumb */
+  }

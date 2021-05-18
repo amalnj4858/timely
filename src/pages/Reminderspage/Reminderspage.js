@@ -48,7 +48,7 @@ const Reminderspage = ({uid,userName,darkModeOn})=>{
                 <div className='important'>
                     <div className='remindersDivision'>
                         <br/>
-                       <div className = 'remindersTitle'> IMPORTANT </div>   
+                        IMPORTANT 
                         
                         {
                             importantReminders ?
@@ -67,7 +67,7 @@ const Reminderspage = ({uid,userName,darkModeOn})=>{
                 <div className='intermediate'>
                     <div className='remindersDivision'>
                         <br/>
-                       <div className = 'remindersTitle'> INTERMEDIATE </div> 
+                        INTERMEDIATE 
                         
                         {
                             intermediateReminders ?
@@ -86,8 +86,7 @@ const Reminderspage = ({uid,userName,darkModeOn})=>{
                 <div className='lite'>
                     <div className='remindersDivision'>
                         <br/>
-                       <div className = 'remindersTitle'> LITE </div> 
-                        
+                        LITE 
                         {
                             liteReminders ?
                                 liteReminders.length>0 ?
