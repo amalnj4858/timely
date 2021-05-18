@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { signOutUser } from '../../redux/User/User-actions';
 import firebase from '../../firebase/firebase.config.js';
 import {Link} from 'react-router-dom';
+import Slider from '../Slider/Slider';
 
 const Header = ({currentUser,signOutUser}) =>{   //these props are provided by redux 
     const onButtonClick = ()=>{                 //function signs out user. It affects the 'onAuthStateChanged' function in App.js which later updates the store.
@@ -14,6 +15,7 @@ const Header = ({currentUser,signOutUser}) =>{   //these props are provided by r
         <div className='header'>
             <div className='logo'>timely.</div>
              <div className='options'>
+                <Slider />
                 <Link to ={currentUser ? '/home' : '/'} className='option'>Home</Link>
                 <div className='option'>Features</div>
                 <div className='option' >

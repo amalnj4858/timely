@@ -9,10 +9,10 @@ const TimeIndicator = ()=>{
     return(
         <div className= 'TimeIndicator'>
             <br />
-            <img src = {morningImage} className = 'timingImage'/>
-            <img src = {afternoonImage} className = 'timingImage'/>
-            <img src = {eveningImage} className = 'timingImage'/>
-            <img src = {nightImage} className = 'timingImage'/>
+            <img src = {morningImage} className = 'timingImage' alt = 'timing of the plan'/>
+            <img src = {afternoonImage} className = 'timingImage' alt = 'timing of the plan'/>
+            <img src = {eveningImage} className = 'timingImage' alt = 'timing of the plan'/>
+            <img src = {nightImage} className = 'timingImage' alt = 'timing of the plan'/>
         </div>
     )
 }
