@@ -10,7 +10,6 @@ const Signinpage = ()=>{
             <h1 className='description'>LOG IN</h1>
             <Signinform/>
             <img src = {hourglass} className= 'hourglass' />
-            <img src = {alarm} className = 'alarmClock' />
         </div>
     )
 }

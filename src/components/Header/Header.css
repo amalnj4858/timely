@@ -36,6 +36,14 @@
     text-decoration: none;
 }
 
+.link:hover,.option{
+    text-decoration: none;
+}
+
 .link:active,:visited{
     color: white;
+}
+
+link:hover{
+    text-decoration: none;
 }

@@ -1,6 +1,6 @@
 .homepage{
     height: 90%;
-    background:linear-gradient(180deg, #555251 60%, white 50%);
+    background:linear-gradient(180deg, #555251 70%, white 30%);
     color: white;
     font-family:  'Lato', sans-serif;
     display: flex;
@@ -32,7 +32,7 @@
   display: flex;
   gap: 5rem;
   position: relative;
-  top: 18%;
+  top: 10%;
 }
 
 @keyframes shake {

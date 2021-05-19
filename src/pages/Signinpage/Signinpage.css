@@ -13,22 +13,29 @@
     width: 150px;
     background:initial;
     position: absolute;
-    top: 65%;
-    right: 5%;
+    top: 70%;
+    left: 46%;
+    right: 50%;
+    animation: rotateHourGlass 3s infinite;
 }
 
-.alarmClock{
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    top: 10%;
-    left: 5%;
-}
 
 .description{
     align-self: center;
     font-family: 'Lato', sans-serif;
-    margin-top: 20vh;
+    margin-top: 15vh;
     color: white;
     z-index: 10;
+}
+
+@keyframes rotateHourGlass {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }

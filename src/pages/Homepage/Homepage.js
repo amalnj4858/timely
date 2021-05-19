@@ -7,12 +7,13 @@ import stickyNoteImage from '../../assets/stickynote.png';
 import timetable from '../../assets/time-table.png';
 import './Homepage.css';
 
-const Homepage = ({darkModeOn})=>{
+const Homepage = ({darkModeOn,userName})=>{
     console.log(darkModeOn)
     return(
         <div className='homepage' style ={darkModeOn?{background : `#555251` }:{background : `linear-gradient(180deg, #555251 60%, white 50%)`}}>
             <img src = {alarm} alt = 'alarm-clock' className='alarm'/>
-            <div className='homepage-heading'>A website that helps you keep up with time :)</div>
+            <div className = 'homepage-heading'>Hey there {userName}!</div>
+            <div className='homepage-heading'>Here's a website that helps you keep up with time :) </div>
             <div className='features'>
                 <FeatureCard image = {stickyNoteImage} heading = 'Notes' />
                 <FeatureCard image = {ReminderImage} heading = 'Reminders' />
@@ -24,7 +25,8 @@ const Homepage = ({darkModeOn})=>{
 }
 
 const mapStateToProps = (state)=>({
-    darkModeOn : state.darkMode.dark
+    darkModeOn : state.darkMode.dark,
+    userName : state.user.currentUser.displayName
 })
 
 export default connect(mapStateToProps)(Homepage);

@@ -8,7 +8,7 @@ import firebase from '../../firebase/firebase.config.js';
 
 import './Notespage.css';
 
-const Notespage = ({userName,uid,darkModeOn})=>{
+const Notespage = ({uid,darkModeOn})=>{
 
     const [notes,setNotes] = useState(null);
     const [filteredNotes,setFilteredNotes] = useState(null);
@@ -53,7 +53,6 @@ const Notespage = ({userName,uid,darkModeOn})=>{
     return(
         <div className='notesPage'>
             <div className='createNotes'>
-                <div className='greeting'>{`Hey there ${userName}!`}</div>
                 <CreateNote uid = {uid} />
             </div>
             <div className = 'notesHolder' style = {darkModeOn?{background : '#121212'}:{background:'white'}}>
@@ -65,7 +64,6 @@ const Notespage = ({userName,uid,darkModeOn})=>{
 }
 
 const matchStateToProps = (state)=>({   //fetches the username and uid of user from the store
-    userName : state.user.currentUser.displayName,
     uid : state.user.currentUser.uid,
     darkModeOn : state.darkMode.dark
 })

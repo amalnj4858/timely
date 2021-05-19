@@ -4,6 +4,7 @@
     justify-items: center;
     grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
     border: gray 1px solid;
+    background: lightslategrey;
 }
 
 .timingImage{

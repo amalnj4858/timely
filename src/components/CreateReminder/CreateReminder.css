@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 75%;
     height: fit-content;
     border: white solid 1px;
     border-radius: 5px;
@@ -26,13 +26,13 @@
     border-radius: 5px;
     font-family:  'Lato', sans-serif;
     height: 20px;
-    width: 70%;
+    width: 90%;
     font-size: medium;
     color: white;
 }
 
 .reminderDescription{
-    width: 90%;
+    width: 100%;
     height: 20vh;
     background: inherit;
     border: white solid 1px;
