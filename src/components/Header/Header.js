@@ -18,17 +18,17 @@ const Header = ({currentUser,signOutUser}) =>{   //these props are provided by r
             <div className='logo'>timely.</div>
              <div className='options'>
                 <Slider />
-                <Link to ={currentUser ? '/timely/home' : '/timely'} className='link1'>Home</Link>
+                <Link to ={currentUser ? `${process.env.PUBLIC_URL}/home` : `${process.env.PUBLIC_URL}`} className='link1'>Home</Link>
                 
                     <DropdownButton id="dropdown-basic-button" title="Features" className = 'option1'>
-                    <Dropdown.Item ><Link to ={currentUser ? '/timely/home/notes' : '/timely'} className = 'featureOption' >Notes</Link></Dropdown.Item>
-                    <Dropdown.Item ><Link to ={currentUser ? '/timely/home/reminders' : '/timely'} className = 'featureOption' >Reminders</Link></Dropdown.Item>
-                    <Dropdown.Item ><Link to ={currentUser ? '/timely/home/weekly-planner' : '/timely'} className = 'featureOption' >Weekly Planner</Link></Dropdown.Item>
+                    <Dropdown.Item ><Link to ={currentUser ? `${process.env.PUBLIC_URL}/home/notes` : `${process.env.PUBLIC_URL}`} className = 'featureOption' >Notes</Link></Dropdown.Item>
+                    <Dropdown.Item ><Link to ={currentUser ? `${process.env.PUBLIC_URL}/home/reminders` : `${process.env.PUBLIC_URL}`} className = 'featureOption' >Reminders</Link></Dropdown.Item>
+                    <Dropdown.Item ><Link to ={currentUser ? `${process.env.PUBLIC_URL}/home/weekly-planner` : `${process.env.PUBLIC_URL}`} className = 'featureOption' >Weekly Planner</Link></Dropdown.Item>
                     </DropdownButton>
                 
                 <div className='option1' >
                     {
-                        currentUser ? <Link className='link1' to ='/timely' onClick={onButtonClick}>Sign Out</Link> :<Link className='link1' to ='/timely'>Sign In</Link>
+                        currentUser ? <Link className='link1' to ={`${process.env.PUBLIC_URL}`} onClick={onButtonClick}>Sign Out</Link> :<Link className='link1' to ={`${process.env.PUBLIC_URL}`}>Sign In</Link>
                     }
                 </div>
              </div>   

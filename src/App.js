@@ -40,11 +40,11 @@ const App =({setCurrentUser,currentUser})=> {
     <div className="App">
       <Header/>
         <Switch>
-          <Route exact path = '/timely' render = {()=>currentUser ? <Redirect to = '/timely/home' />: <Signinpage/> } />
-          <Route exact path = '/timely/home' component = {Homepage} />
-          <Route exact path = '/timely/home/notes' component = {Notespage} />
-          <Route exact path = '/timely/home/reminders' component = {Reminderspage} />
-          <Route exact path = '/timely/home/weekly-planner' component = {WeeklyPlannerpage} />
+          <Route exact path = {process.env.PUBLIC_URL} render = {()=>currentUser ? <Redirect to = {process.env.PUBLIC_URL+'/home'} />: <Signinpage/> } />
+          <Route exact path = {process.env.PUBLIC_URL + '/home'} component = {Homepage} />
+          <Route exact path = {process.env.PUBLIC_URL + '/home/notes'} component = {Notespage} />
+          <Route exact path = {process.env.PUBLIC_URL + '/home/reminders'} component = {Reminderspage} />
+          <Route exact path = {process.env.PUBLIC_URL + '/home/weekly-planner'} component = {WeeklyPlannerpage} />
         </Switch>
     </div>
   );
