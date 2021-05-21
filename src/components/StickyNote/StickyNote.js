@@ -1,6 +1,5 @@
 import React from 'react';
 import firebase from '../../firebase/firebase.config';
-import {Draggable} from 'react-beautiful-dnd';
 import './StickyNote.css';
 
 
@@ -17,7 +16,7 @@ const StickyNote = ({title,description,noteId,type,daysLeft})=>{
             </div>
             <div className='stickynoteDescription'>{description}</div>
             {
-                daysLeft ?
+                daysLeft ?                                                                     //for reminders it checks if its expired or not
                     daysLeft > 0 ?
                     <div className = 'activeNote'>expires in {Math.ceil(daysLeft)} days</div>
                     :

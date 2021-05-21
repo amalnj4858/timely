@@ -6,7 +6,7 @@ import Empty from '../../assets/EmptyBox.png';
 import './Reminderspage.css';
 import StickyNote from '../../components/StickyNote/StickyNote';
 import Spinner from '../../components/Spinner/Spinner';
-import {DragDropContext,Droppable} from 'react-beautiful-dnd'
+
 
 
 const Reminderspage = ({uid,userName,darkModeOn})=>{

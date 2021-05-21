@@ -13,7 +13,7 @@ const CreateWeeklyPlan = ({uid,plans})=>{
     const onButtonClick = (event)=>{
         event.preventDefault();
         if(title)
-            if(plans.filter(plan=>plan.day === day && plan.timing === timing).length === 0)
+            if(plans.filter(plan=>plan.day === day && plan.timing === timing).length === 0) //creates a plan in the firestore database if it isn't clashing
                 {
                     database.collection('weekly-planner').add({
                     uid : uid,
@@ -65,7 +65,7 @@ const CreateWeeklyPlan = ({uid,plans})=>{
 }
 
 const mapStateToProps = (state)=>({
-    plans : state.weeklyPlans.plans
+    plans : state.weeklyPlans.plans    // fetches existing plans of the user from redux store
 })
 
 export default connect(mapStateToProps)(CreateWeeklyPlan);

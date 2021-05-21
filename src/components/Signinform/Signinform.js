@@ -8,9 +8,6 @@ const Signinform = ()=>{
     const popUp  = ()=>{
         signInWithPopUp(); // pops up when button is clicked
     }
-    const onButtonClick = (event)=>{
-        event.preventDefault();
-    }
     return(
         <div className='signinform'>
             <span className='formInfo'>

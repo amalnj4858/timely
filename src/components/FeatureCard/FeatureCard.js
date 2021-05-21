@@ -19,4 +19,4 @@ const mapStateToProps = (state)=>({
     darkModeOn : state.darkMode.dark
 })
 
-export default connect(mapStateToProps)(withRouter(FeatureCard));  //to get the history prop from the react-router-dom
+export default connect(mapStateToProps)(withRouter(FeatureCard));  //to get the history prop from the react-router-dom and also access parts of the redux store

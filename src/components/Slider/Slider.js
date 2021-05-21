@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { toggleDarkMode } from '../../redux/DarkMode/DarkMode-actions';
 import './Slider.css';
-const Slider = ({darkMode,toggleDarkMode})=>{
+const Slider = ({darkMode,toggleDarkMode})=>{               //slider for dark mode
     const onSliderClick = ()=>{
         toggleDarkMode(darkMode)
     }

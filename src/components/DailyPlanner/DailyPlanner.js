@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import PlanHolder from '../PlanHolder/PlanHolder';
 import './DailyPlanner.css';
 
-const DailyPlanner = ({day,plans})=>{
+const DailyPlanner = ({day,plans})=>{            //holds the plan for each day of the week
     return(
         <div className='DailyPlanner'>
             <div className='dayName'>

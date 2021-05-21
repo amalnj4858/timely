@@ -4,7 +4,7 @@ import TimeIndicator from '../TimeIndicator/TimeIndicator';
 import {connect} from 'react-redux'
 import './Planner.css';
 
-const Planner = ({darkModeOn})=>{
+const Planner = ({darkModeOn})=>{          //the weekly planner
     console.log(darkModeOn)
     return(
         <div className='Planner' style = {darkModeOn?{color:'white'}:{color:'black'}} >

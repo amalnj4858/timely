@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from '../../firebase/firebase.config.js';
 import './PlanHolder.css';
 
-const PlanHolder = ({plan})=>{
+const PlanHolder = ({plan})=>{          //represents a cell of the time table
 
     const onButtonClick = ()=>{
         firebase.firestore().collection('weekly-planner').doc(`${plan.id}`).delete();

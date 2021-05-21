@@ -12,7 +12,7 @@ const CreateReminder = ({uid})=>{
 
     const onButtonClick = (event)=>{
         event.preventDefault();
-        if(title && description)
+        if(title && description)  //if selected date is valid, it updates the reminder in firestore
             if(date<expiryDate){
                 database.collection('reminders').add({
                     title,
