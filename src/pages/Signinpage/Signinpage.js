@@ -1,6 +1,6 @@
 import React from 'react';
 import hourglass from '../../assets/logo-hourglass.png';
-import alarm from '../../assets/logo-alarm.png';
+
 import Signinform from '../../components/Signinform/Signinform.js';
 import './Signinpage.css';
 

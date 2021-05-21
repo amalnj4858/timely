@@ -40,11 +40,11 @@ const App =({setCurrentUser,currentUser})=> {
     <div className="App">
       <Header/>
         <Switch>
-          <Route exact path = '/' render = {()=>currentUser ? <Redirect to = '/home' />: <Signinpage/> } />
-          <Route exact path = '/home' component = {Homepage} />
-          <Route exact path = '/home/notes' component = {Notespage} />
-          <Route exact path = '/home/reminders' component = {Reminderspage} />
-          <Route exact path = '/home/weekly-planner' component = {WeeklyPlannerpage} />
+          <Route exact path = '/timely' render = {()=>currentUser ? <Redirect to = '/timely/home' />: <Signinpage/> } />
+          <Route exact path = '/timely/home' component = {Homepage} />
+          <Route exact path = '/timely/home/notes' component = {Notespage} />
+          <Route exact path = '/timely/home/reminders' component = {Reminderspage} />
+          <Route exact path = '/timely/home/weekly-planner' component = {WeeklyPlannerpage} />
         </Switch>
     </div>
   );
