@@ -35,7 +35,7 @@ const App =({setCurrentUser,currentUser})=> {
     }
     }
 })
-
+console.log(process.env.PUBLIC_URL)
   return (
     <div className="App">
       <Header/>
