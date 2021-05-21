@@ -5,7 +5,7 @@ import './FeatureCard.css';
  
 const FeatureCard = ({image,heading,history,darkModeOn})=>{   //the cards displayed in home page
     const onClickCard = ()=>{
-        history.push(`${process.env.PUBLIC_URL}/home/${heading.toLowerCase()}`);
+        history.push(`/home/${heading.toLowerCase()}`);
     }
     return(
         <div className='featureCard' onClick = {onClickCard} style ={darkModeOn?{background :'black'}:{background :'white'}} >  
