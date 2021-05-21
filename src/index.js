@@ -9,7 +9,7 @@ import {BrowserRouter} from 'react-router-dom';
 
 
 ReactDOM.render(
-  <BrowserRouter basename='/timely'> 
+  <BrowserRouter basename={process.env.PUBLIC_URL}> 
     <Provider store={store}>
       <App />
     </Provider>
