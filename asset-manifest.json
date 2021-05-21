@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/timely/static/css/main.a9ae3fbd.chunk.css",
-    "main.js": "/timely/static/js/main.9eaadab4.chunk.js",
-    "main.js.map": "/timely/static/js/main.9eaadab4.chunk.js.map",
+    "main.js": "/timely/static/js/main.c9110982.chunk.js",
+    "main.js.map": "/timely/static/js/main.c9110982.chunk.js.map",
     "runtime-main.js": "/timely/static/js/runtime-main.ff733530.js",
     "runtime-main.js.map": "/timely/static/js/runtime-main.ff733530.js.map",
     "static/css/2.150d169a.chunk.css": "/timely/static/css/2.150d169a.chunk.css",
@@ -18,7 +18,6 @@
     "static/media/afternoon.1585c1fc.png": "/timely/static/media/afternoon.1585c1fc.png",
     "static/media/alarm-clock.88bb0359.png": "/timely/static/media/alarm-clock.88bb0359.png",
     "static/media/evening.d0e0d077.png": "/timely/static/media/evening.d0e0d077.png",
-    "static/media/logo-alarm.0533a7cd.png": "/timely/static/media/logo-alarm.0533a7cd.png",
     "static/media/logo-hourglass.1874e32d.png": "/timely/static/media/logo-hourglass.1874e32d.png",
     "static/media/night.057aedb1.png": "/timely/static/media/night.057aedb1.png",
     "static/media/reminder.c81d2dda.png": "/timely/static/media/reminder.c81d2dda.png",
@@ -29,6 +28,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.5106b0c1.chunk.js",
     "static/css/main.a9ae3fbd.chunk.css",
-    "static/js/main.9eaadab4.chunk.js"
+    "static/js/main.c9110982.chunk.js"
   ]
 }
