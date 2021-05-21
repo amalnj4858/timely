@@ -1,12 +1,27 @@
 .notesContainer{
+    height: 78vh;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
     padding: 20px;
     justify-items: center;
     word-wrap: break-word;
+    overflow-y: auto;
 }
 
 .notesContainer:last-child{
     margin-bottom: 1rem;
 }
+
+.notesContainer::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  .notesContainer::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+  .notesContainer::-webkit-scrollbar-thumb {
+    background-color: gray;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }

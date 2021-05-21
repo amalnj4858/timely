@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from '../../firebase/firebase.config';
+import {Draggable} from 'react-beautiful-dnd';
 import './StickyNote.css';
 
 
@@ -9,7 +10,7 @@ const StickyNote = ({title,description,noteId,type,daysLeft})=>{
         database.collection(`${type}`).doc(`${noteId}`).delete();
     }
     return(
-        <div className='stickynote'>
+            <div className='stickynote'>
             <div className='stickyNoteHeading'>
                 <div className='close' onClick={onButtonClick}> &#10008; </div>
                 <div className='stickynoteTitle'>{title.toUpperCase()}</div>
@@ -24,7 +25,8 @@ const StickyNote = ({title,description,noteId,type,daysLeft})=>{
                 :
                 null
             }
-        </div>
+            </div>
+        
     )
 }
 

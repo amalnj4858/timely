@@ -5,25 +5,22 @@
     display: flex;
     flex-direction: column;
     background-color:#343D40;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    min-width: 1000px;
 }
 
 .hourglass{
-    height: 150px;
-    width: 150px;
+    height: 75px;
+    width: 75px;
     background:initial;
-    position: absolute;
-    top: 70%;
-    left: 46%;
-    right: 50%;
     animation: rotateHourGlass 3s infinite;
 }
 
 
 .description{
-    align-self: center;
     font-family: 'Lato', sans-serif;
-    margin-top: 15vh;
     color: white;
     z-index: 10;
 }

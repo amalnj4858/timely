@@ -6,7 +6,7 @@ import './NotesContainer.css';
 
 const NotesContainer = ({notes})=>{  //returns the collection of all notes
     return(
-        <div className='notesContainer'>
+        <div className='notesContainer' onDragOver = {(e)=>e.preventDefault()} >
             {   
                 notes ?
                     notes.length>0?

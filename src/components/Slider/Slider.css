@@ -3,6 +3,8 @@
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   
   /* Hide default HTML checkbox */

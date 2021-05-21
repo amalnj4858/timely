@@ -6,6 +6,7 @@ import Empty from '../../assets/EmptyBox.png';
 import './Reminderspage.css';
 import StickyNote from '../../components/StickyNote/StickyNote';
 import Spinner from '../../components/Spinner/Spinner';
+import {DragDropContext,Droppable} from 'react-beautiful-dnd'
 
 
 const Reminderspage = ({uid,userName,darkModeOn})=>{
@@ -40,8 +41,7 @@ const Reminderspage = ({uid,userName,darkModeOn})=>{
 
     return(
         <div className='remindersPage'>
-            <div className='createReminder'>
-                
+            <div className='createReminder'> 
                 <CreateReminder uid = {uid} />
             </div>
             <div className='remindersContainer' style = {darkModeOn?{color : 'white',background : '#121212'}:{color : 'black',background : 'white'}} >
@@ -61,13 +61,13 @@ const Reminderspage = ({uid,userName,darkModeOn})=>{
                             :
                              <Spinner />
                         }
-                  
+                        
                     </div>
                 </div>
                 <div className='intermediate'>
                     <div className='remindersDivision'>
                         <br/>
-                        INTERMEDIATE 
+                        INTERMEDIATE
                         
                         {
                             intermediateReminders ?
@@ -87,6 +87,7 @@ const Reminderspage = ({uid,userName,darkModeOn})=>{
                     <div className='remindersDivision'>
                         <br/>
                         LITE 
+                        
                         {
                             liteReminders ?
                                 liteReminders.length>0 ?

@@ -17,33 +17,45 @@
     width: 100%;
     font-weight: 400;
     font-size:large;
-    margin-top: auto;
-    margin-bottom: auto;
+    align-items: center;
+    gap: 20px;
+    color: white;
 }
-.option{
+.option1{
     height: fit-content;
-    margin-right: 10px;
-    margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
+    color: white;
 }
 
 .options:last-child{
     margin-right: 25px;
 }
 
-.link{
+.link1{
     text-decoration: none;
-}
-
-.link:hover,.option{
-    text-decoration: none;
-}
-
-.link:active,:visited{
     color: white;
 }
 
-link:hover{
+.featureOption{
     text-decoration: none;
+    color: black;
+}
+
+.link1:active,:visited{
+    color: white;
+}
+
+.option1:hover,.link1:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.featureOption:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.featureOption:active,:visited{
+    color: black;
 }
