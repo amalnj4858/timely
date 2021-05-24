@@ -24,6 +24,8 @@
     background: #FFFF88;
     word-wrap: break-word;
     padding: 20px;
+    border: none;
+    resize: none;
 }
 
 .close{
@@ -57,4 +59,25 @@
     border: red 1px solid;
     border-radius: 10px;
     
+}
+
+.editButton{
+    margin: 5px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-self: flex-start;
+    width: fit-content;
+    font-size: small;
+    color: gray;
+    border: darkgoldenrod 2px solid;
+    border-radius: 5px;
+}
+
+.editButton:hover{
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
 }

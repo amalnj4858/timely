@@ -5,7 +5,6 @@ import {connect} from 'react-redux'
 import './Planner.css';
 
 const Planner = ({darkModeOn})=>{          //the weekly planner
-    console.log(process.env.PUBLIC_URL)
     return(
         <div className='Planner' style = {darkModeOn?{color:'white'}:{color:'black'}} >
             <TimeIndicator />
