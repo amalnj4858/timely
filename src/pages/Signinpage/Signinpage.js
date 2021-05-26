@@ -7,7 +7,7 @@ import './Signinpage.css';
 const Signinpage = ()=>{
     return(
         <div className='signinpage'>
-            <img src = {hourglass} className= 'hourglass' />
+            <img src = {hourglass} className= 'hourglass' alt = 'rotating hourglass' />
             <h1 className='description'>LOG IN</h1>
             <Signinform/>
         </div>

@@ -9,7 +9,7 @@ const FeatureCard = ({image,heading,history,darkModeOn})=>{   //the cards displa
     }
     return(
         <div className='featureCard' onClick = {onClickCard} style ={darkModeOn?{background :'black'}:{background :'white'}} >  
-            <img src = {image} className = 'featureImage' prop = 'feature'/>
+            <img src = {image} className = 'featureImage' prop = 'feature' alt = 'Preview of the feature'/>
             <div className='featureTitle'>{heading}</div>
         </div>
     )
