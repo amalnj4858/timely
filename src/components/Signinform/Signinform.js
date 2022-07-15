@@ -9,7 +9,7 @@ const Signinform = () => {
   };
   return (
     <div className="signinform">
-      <span className="formInfo">Login with gmail to continue</span>
+      <span className="formInfo">Login with Gmail to continue</span>
       <button className="signinButton" onClick={popUp}>
         <img src={googleImage} className="googleImage" alt="logo of google" />
         <div>SIGN IN WITH GOOGLE</div>
